@@ -2,7 +2,7 @@
 ## Tools used in Project:
 - GCP and Terraform
 ![image](./img1.png)
-- Docker and Kubernetes
+- Docker, Kubernetes  and Jenkins
 ![image](./img2.png)
 ## Infastructure: 
 - Service-account
@@ -90,6 +90,7 @@ deployment.apps/visits-app   1/1     1            1           130m
 NAME                                    DESIRED   CURRENT   READY   AGE
 replicaset.apps/visits-app-85c5b5c884   1         1         1       130m
 ```
+### 5) for more information about the jenkins file , creating the deployment for running the application on another name space , Please check this link [Pipeline](https://github.com/AmeerHossam/Final-Pipe)
 
-### 5) ensure that the app is running
+### 6) ensure that the app is running
 ![image](./img3.png)
