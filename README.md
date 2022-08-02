@@ -48,6 +48,30 @@ $ gcloud container clusters get-credentials my-gke-cluster --region us-central1 
 $ kubectl get nodes
 ```
 ### 4) Deploy app on kubernetes cluster
+- ###  Run a deployment has a pod with running container with jenkins base image and docker , kubectl installed. go to the link for more details about the deployment [Jenkins Deployment](https://github.com/AmeerHossam/Final-Project-ITI/blob/master/Deployment-jenkins/jen-deployment.yaml).
+- ### Run 2  services (Load Balancer) to get access to jenkins pod  and (ClusterIP service) to make the service is reachable within the cluster , Check the service file [Services file](https://github.com/AmeerHossam/Final-Project-ITI/blob/master/Deployment-jenkins/services.yaml).
+- ### Create PVC and storageClass to keep the data of the deployment saved , Check the configuration files [PVC file](https://github.com/AmeerHossam/Final-Project-ITI/blob/master/Deployment-jenkins/PVC.yaml) and [Storage Class file](https://github.com/AmeerHossam/Final-Project-ITI/blob/master/Deployment-jenkins/storageClass.yaml).
+- ### Create  k8s Service account to make the pods manipulate on the k8s cluster's objects , Check the Service-account file [Service account](https://github.com/AmeerHossam/Final-Project-ITI/blob/master/Deployment-jenkins/service-account.yaml).
+
+## Check the jenkins deployment and services:
+```bash
+amir@terraform-instance:~/yaml-files$ kubectl get all
+W0802 21:38:15.388328    7110 gcp.go:120] WARNING: the gcp auth plugin is deprecated in v1.22+, unavailable in v1.25+; use gcloud instead.
+To learn more, consult https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/jenkins-75547b7d5-6prjj   1/1     Running   0          5h33m
+
+NAME                   TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)          AGE
+service/jenkins        LoadBalancer   10.52.1.147   34.136.18.44   8080:31243/TCP   7h15m
+service/jenkins-jnlp   ClusterIP      10.52.9.17    <none>         50000/TCP        7h15m
+
+NAME                      READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/jenkins   1/1     1            1           5h33m
+
+NAME                                DESIRED   CURRENT   READY   AGE
+replicaset.apps/jenkins-75547b7d5   1         1         1       5h33m
+
+```
 
 ### 5) ensure that the app is running
 ![image](./img3.png)
