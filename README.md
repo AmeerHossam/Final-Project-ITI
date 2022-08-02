@@ -73,5 +73,23 @@ replicaset.apps/jenkins-75547b7d5   1         1         1       5h33m
 
 ```
 
+### Check the app deployment on  the service on the "dev"  namespace:
+```bash
+amir@terraform-instance:~/yaml-files$ kubectl get all -n  dev
+W0802 21:44:53.805047    8392 gcp.go:120] WARNING: the gcp auth plugin is deprecated in v1.22+, unavailable in v1.25+; use gcloud instead.
+To learn more, consult https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+NAME                              READY   STATUS    RESTARTS   AGE
+pod/visits-app-85c5b5c884-wp8dq   1/1     Running   0          130m
+
+NAME                 TYPE           CLUSTER-IP    EXTERNAL-IP      PORT(S)          AGE
+service/my-service   LoadBalancer   10.52.10.28   35.232.148.119   8000:30020/TCP   5h30m
+
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/visits-app   1/1     1            1           130m
+
+NAME                                    DESIRED   CURRENT   READY   AGE
+replicaset.apps/visits-app-85c5b5c884   1         1         1       130m
+```
+
 ### 5) ensure that the app is running
 ![image](./img3.png)
