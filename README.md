@@ -1,9 +1,11 @@
-# Deploy python app on GCP using kubernetes
+# Install jenkins on a private pod on GKE cluster and deploy python app on the same pod using CI/CD on the same pod but different namespace through the bastion host
+## What to do?
+![image](./"What to do?"/img1.png)
 ## Tools used in Project:
 - GCP and Terraform
 ![image](./img1.png)
-- Docker, Kubernetes  and Jenkins
-![image](./img2.png)
+- Docker and Dockerhub , Kubernetes  and Jenkins
+![image](/home/amir/ITI-Grad-Project/What to do?img2.png)
 ## Infastructure: 
 - Service-account
 - VPC
@@ -12,7 +14,6 @@
 - cloud-router
 - firewall (Allow ssh and http)
 - vm (bastion host)
-- GCR
 - GKE 
 
 ## Steps:
