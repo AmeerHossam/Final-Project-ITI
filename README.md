@@ -5,7 +5,7 @@
 - GCP and Terraform
 ![image](./img1.png)
 - Docker and Dockerhub , Kubernetes  and Jenkins
-![image](/home/amir/whattodoo?/What to do?img2.png)
+![image](/home/amir/whattodoo?/Whattodo?/img2.png)
 ## Infastructure: 
 - Service-account
 - VPC
