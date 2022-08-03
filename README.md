@@ -1,6 +1,6 @@
 # Install jenkins on a private pod on GKE cluster and deploy python app on the same pod using CI/CD on the same pod but different namespace through the bastion host
 ## What to do?
-![image](./'Whattodo?'/img1.png)
+![image](./img4.png)
 ## Tools used in Project:
 - GCP and Terraform
 ![image](./img1.png)
