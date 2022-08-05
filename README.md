@@ -1,8 +1,12 @@
 # Deploy backend application on kubernetes cluster using CI/CD jenkins pipeline.
+
+## What to do?
+
 - ### Implement secure Kubernetes cluster
 - ### Deploy and configure Jenkins on Kubernetes.
 - ### Deploy backend application on Kubernetes using Jenkins pipeline.
-## What to do?
+
+
 ![image](./img4.png)
 ## Tools used in Project:
 - GCP and Terraform
